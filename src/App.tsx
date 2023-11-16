@@ -35,8 +35,8 @@ const App = () => {
   const calculateResult = () => {
     try {
       const result = evaluate(input);
-      setResult(result.toString());
-      setInput("");
+      setInput(result.toString()); // 計算結果を input にセット
+      setResult("");
     } catch (error) {
       setResult("Error");
       setInput("");
@@ -50,7 +50,7 @@ const App = () => {
 
   return (
     <div css={containerStyle}>
-      <div css={screenStyle}>{input || result || "0"}</div>
+      <div css={screenStyle}>{input || "0"}</div>
       <div css={buttonRowStyle}>
         <Button onClick={() => handleButtonClick("1")}>1</Button>
         <Button onClick={() => handleButtonClick("2")}>2</Button>
