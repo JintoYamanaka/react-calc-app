@@ -3,9 +3,17 @@ import { css } from "@emotion/react";
 
 const buttonStyle = css`
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   margin: 5px;
-  font-size: 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #51cfeb;
+  }
 `;
 
 interface ButtonProps {

@@ -8,20 +8,29 @@ const containerStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Arial', sans-serif;
 `;
 
 const screenStyle = css`
   width: 300px;
-  background: #eee;
+  background: #fff;
+  color: #333;
+  margin-top: 10px;
   margin-bottom: 10px;
   text-align: right;
-  padding: 10px;
-  box-sizing: border-box;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
 
 const buttonRowStyle = css`
   display: flex;
+  justify-content: space-between;
+  width: 300px;
 `;
 
 const App = () => {
@@ -75,7 +84,9 @@ const App = () => {
         <Button onClick={() => handleButtonClick(".")}>.</Button>
         <Button onClick={() => handleButtonClick("/")}>/</Button>
       </div>
-      <Button onClick={calculateResult}>=</Button>
+      <div css={buttonRowStyle}>
+        <Button onClick={calculateResult}>=</Button>
+      </div>
     </div>
   );
 };
